@@ -1,0 +1,22 @@
+# Bonus track opcional de SCRAPING
+# Si es que se desea escrapear, como alternativa presentado en el trabajo grupal, se puede usar una función como se coloca líneas abajo, y de ahí se sigue con los códigos enviados.
+
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# generar la función
+def generate_url():
+    base_url = "https://www.bumeran.com.pe/"
+    location = "en-lima"
+    area = "empleos-area-tecnologia-sistemas-y-telecomunicaciones"
+    subarea = "subarea-programacion"
+    work_mode = "full-time"
+    post_time = "publicacion-menor-a-15-dias"
+    return f"{base_url}{location}/empleos-{area}-{subarea}-{work_mode}-{post_time}.html"
+
+# Llamar a la función para generar la URL
+url = generate_url()
+
+# Imprimir la URL generada
+print(url)
